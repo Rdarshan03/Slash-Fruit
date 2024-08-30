@@ -5,37 +5,73 @@ using UnityEngine;
 
 public class Knife : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    public float throwForce;
+    public Vector3 targetScale = new Vector3(2f, 2f, 2f); // Target scale
+    public float duration = 1f; // Duration for the scale animation
 
-    private void Start()
-    { 
-        rb = GetComponent<Rigidbody2D>();
-    }
-    void Update()
+    private Vector3 originalScale;
+    private Tween scaleTween;
+    public float rotationSpeed = 100f;
+    public bool isRot;
+    float rotationAmount;
+
+    public bool isMove=false;
+    float newY;
+    void Start()
     {
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            ThrowKnife(); 
-        }
 
-    }
-
-    void ThrowKnife() 
-    {
-        transform.DORotate(new Vector3(0f, 0f, 360f), 20f, RotateMode.FastBeyond360)
-           .SetLoops(-1, LoopType.Restart)
-           .SetRelative()
-           .SetEase(Ease.Linear);
-        rb.AddForce(transform.up * throwForce, ForceMode2D.Impulse);
         
     }
-    
+    private void FixedUpdate()
+    {
+        //if (isRot) {
+        //    rotationAmount = rotationSpeed * Time.deltaTime;
+        //    transform.Rotate(Vector3.forward, rotationAmount);
+
+        //}
+        //if (transform.position.y > 5.20f) {
+        //    Destroy(transform.gameObject);
+        //}
+        if (Input.GetMouseButtonDown(0)) {
+
+            isMove=true;
+        }
+            if (isMove) {
+
+          
+
+            // Update the GameObject's position
+            transform.position = new Vector3(transform.position.x, transform.position.y+0.1f, transform.position.z);
+        }
+    }
+
+    //public void StopScaling()
+    //{
+    //    if (scaleTween != null)
+    //    {
+    //        scaleTween.Kill(); // Stop the tween
+    //    }
+    //    transform.localScale = originalScale;
+    //}
+    //public void StartScalling() {
+
+    //    originalScale = transform.localScale;
+
+
+    //    scaleTween = transform.DOScale(targetScale, duration)
+    //        .SetEase(Ease.InOutSine)
+    //        .SetLoops(-1, LoopType.Yoyo);
+    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Fruit")
+        if (collision.gameObject.tag == "line")
         {
-            Destroy(collision.gameObject);
+            StartCoroutine(LevelScript.instance.CreateKnife());
+            Destroy(gameObject);
+
         }
     }
 }
