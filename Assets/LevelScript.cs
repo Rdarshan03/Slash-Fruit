@@ -1,70 +1,40 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelScript : MonoBehaviour
 {
+    public static LevelScript instance;
 
-    public static LevelScript instance; 
-    public GameObject KnifePref;
+    public GameObject knifePrefab; // Reference to the knife prefab
+    public Transform throwPoint; // Point from where the knife will be thrown
 
-    public GameObject LiveKnife;
-    public List<GameObject> LiveKnifeList;
-    public Knife knife;
-
-    private void Awake()
+    private void Update()
     {
-        instance = this;
-    }
-    void Start()
-    {
-        StartCoroutine(CreateKnife());
+        // Check for input to throw the knife (e.g., pressing the space bar)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ThrowKnife();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ThrowKnife()
     {
-        //if (Input.GetMouseButtonDown(0)) {
-        //    Debug.Log("adsasdasda");
-        //    if (LiveKnife) {
-               
-        //        ThrowKnife();
-                
-        //    }
-        
-        
-        //}
-    }
-    //void ThrowKnife()
-    //{
-    //    LiveKnife.GetComponent<Rigidbody2D>().isKinematic = false;
-    //    LiveKnife.transform.DORotate(new Vector3(0f, 0f, 360f), 20f, RotateMode.FastBeyond360)
-    //       .SetLoops(-1, LoopType.Restart)
-    //       .SetRelative()
-    //       .SetEase(Ease.Linear);
-    //    LiveKnife.transform.DOMoveY(10, 1).SetEase(Ease.Linear).OnComplete(() => {
-    //        if (LiveKnifeList.Count > 0) {
+        if (knifePrefab && throwPoint)
+        {
+            // Instantiate the knife at the throw point
+            GameObject knife = Instantiate(knifePrefab, throwPoint.position, throwPoint.rotation);
 
-    //            Destroy(LiveKnifeList[0]);
-    //            StartCoroutine(CreateKnife());
+            // Get the Knife script and Rigidbody2D component
+            Knife knifeScript = knife.GetComponent<Knife>();
+            Rigidbody2D rb = knife.GetComponent<Rigidbody2D>();
 
-    //        }
-        
-        
-    //    });
+            if (rb)
+            {
+                // Set the knife's velocity based on throw direction and speed
+                rb.velocity = throwPoint.up * knifeScript.speed;
 
-    //}
-    public IEnumerator  CreateKnife() {
-
-        yield return new WaitForSeconds(0.2f);
-      
-             
-        Instantiate(KnifePref);
-        // knife=LiveKnife.GetComponent<Knife>();
-        //LiveKnifeList.Add(LiveKnife);
-       // knife.StartScalling();
-       // LiveKnife.transform.DOScale(Vector3.one,0.1f).SetEase(Ease.OutSine).OnComplete(()=> knife.StartScalling());
+                // Optionally, enable rotation
+                knifeScript.knifeRot = true;
+            }
+        }
     }
 }

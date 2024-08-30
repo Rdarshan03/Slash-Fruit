@@ -1,77 +1,33 @@
-using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Knife : MonoBehaviour
 {
-    public Vector3 targetScale = new Vector3(2f, 2f, 2f); // Target scale
-    public float duration = 1f; // Duration for the scale animation
+    public float speed = 10f; // Speed of the knife
+    public float lifetime = 5f; // Time after which the knife is destroyed
+    public bool knifeRot = false; // Flag to enable rotation
+    public float rotationSpeed = 100f; // Rotation speed in degrees per second
 
-    private Vector3 originalScale;
-    private Tween scaleTween;
-    public float rotationSpeed = 100f;
-    public bool isRot;
-    float rotationAmount;
-
-    public bool isMove=false;
-    float newY;
-    void Start()
+    private void Start()
     {
-
-        
+        // Destroy the knife after its lifetime expires
+        Destroy(gameObject, lifetime);
     }
-    private void FixedUpdate()
+
+    private void Update()
     {
-        //if (isRot) {
-        //    rotationAmount = rotationSpeed * Time.deltaTime;
-        //    transform.Rotate(Vector3.forward, rotationAmount);
-
-        //}
-        //if (transform.position.y > 5.20f) {
-        //    Destroy(transform.gameObject);
-        //}
-        if (Input.GetMouseButtonDown(0)) {
-
-            isMove=true;
-        }
-            if (isMove) {
-
-          
-
-            // Update the GameObject's position
-            transform.position = new Vector3(transform.position.x, transform.position.y+0.1f, transform.position.z);
+        // Rotate the knife if knifeRot is true
+        if (knifeRot)
+        {
+            transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
         }
     }
 
-    //public void StopScaling()
-    //{
-    //    if (scaleTween != null)
-    //    {
-    //        scaleTween.Kill(); // Stop the tween
-    //    }
-    //    transform.localScale = originalScale;
-    //}
-    //public void StartScalling() {
-
-    //    originalScale = transform.localScale;
-
-
-    //    scaleTween = transform.DOScale(targetScale, duration)
-    //        .SetEase(Ease.InOutSine)
-    //        .SetLoops(-1, LoopType.Yoyo);
-    //}
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "line")
+        if (collision.CompareTag("line"))
         {
-            StartCoroutine(LevelScript.instance.CreateKnife());
+            // Destroy the knife on collision with an object tagged "line"
             Destroy(gameObject);
-
         }
     }
 }
