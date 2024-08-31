@@ -15,7 +15,7 @@ E:/New Git App Gamers/Slash-Fruit
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-57928
+57760
 Successfully changed project path to: E:/New Git App Gamers/Slash-Fruit
 E:/New Git App Gamers/Slash-Fruit
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ E:/New Git App Gamers/Slash-Fruit
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [35468] Host "[IP] 172.26.240.1 [Port] 0 [Flags] 2 [Guid] 256853868 [EditorId] 256853868 [Version] 1048832 [Id] WindowsEditor(7,DSR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12840] Host "[IP] 172.26.240.1 [Port] 0 [Flags] 2 [Guid] 3677772499 [EditorId] 3677772499 [Version] 1048832 [Id] WindowsEditor(7,DSR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [35468] Host "[IP] 172.26.240.1 [Port] 0 [Flags] 2 [Guid] 256853868 [EditorId] 256853868 [Version] 1048832 [Id] WindowsEditor(7,DSR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12840] Host "[IP] 172.26.240.1 [Port] 0 [Flags] 2 [Guid] 3677772499 [EditorId] 3677772499 [Version] 1048832 [Id] WindowsEditor(7,DSR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 15.93 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 11.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.11f1 (d00248457e15)
 [Subsystems] Discovering subsystems at path E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -66,57 +66,58 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     5966 MB
     Driver:   32.0.15.6038
+Shader 'Custom/WaterFillEffect': fallback shader 'Transparent' not found
 Initialize mono
 Mono path[0] = 'E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006307 seconds.
-- Loaded All Assemblies, in  0.364 seconds
+Registered in 0.005767 seconds.
+- Loaded All Assemblies, in  0.331 seconds
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 255 ms
+Android Extension - Scanning For ADB Devices 243 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.566 seconds
-Domain Reload Profiling: 930ms
-	BeginReloadAssembly (120ms)
+- Finished resetting the current domain, in  0.534 seconds
+Domain Reload Profiling: 865ms
+	BeginReloadAssembly (102ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
+	RebuildCommonClasses (32ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (151ms)
-		LoadAssemblies (122ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (139ms)
+		LoadAssemblies (103ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (146ms)
-			TypeCache.Refresh (145ms)
-				TypeCache.ScanAssembly (131ms)
+		AnalyzeDomain (136ms)
+			TypeCache.Refresh (135ms)
+				TypeCache.ScanAssembly (122ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (567ms)
+	FinalizeReload (534ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (512ms)
+		SetupLoadedEditorAssemblies (482ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (368ms)
+			InitializePlatformSupportModulesInManaged (349ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (96ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -124,8 +125,8 @@ Domain Reload Profiling: 930ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.858 seconds
-Refreshing native plugins compatible for Editor in 4.82 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.697 seconds
+Refreshing native plugins compatible for Editor in 4.31 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -135,47 +136,48 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.606 seconds
-Domain Reload Profiling: 1464ms
-	BeginReloadAssembly (219ms)
+- Finished resetting the current domain, in  0.601 seconds
+Domain Reload Profiling: 1298ms
+	BeginReloadAssembly (158ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (532ms)
-		LoadAssemblies (487ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (447ms)
+		LoadAssemblies (358ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (180ms)
-			TypeCache.Refresh (156ms)
-				TypeCache.ScanAssembly (136ms)
-			ScanForSourceGeneratedMonoScriptInfo (19ms)
+		AnalyzeDomain (187ms)
+			TypeCache.Refresh (159ms)
+				TypeCache.ScanAssembly (140ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (607ms)
+	FinalizeReload (602ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (457ms)
+		SetupLoadedEditorAssemblies (444ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (32ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (77ms)
-			ProcessInitializeOnLoadAttributes (309ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (305ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
 			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 5.93 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Shader 'Custom/WaterFillEffect': fallback shader 'Transparent' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 4.22 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4043 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 66 unused Assets / (61.0 KB). Loaded Objects now: 4511.
-Memory consumption went from 150.0 MB to 150.0 MB.
-Total: 4.006100 ms (FindLiveObjects: 0.628400 ms CreateObjectMapping: 0.137100 ms MarkObjects: 3.086900 ms  DeleteObjects: 0.152300 ms)
+Unloading 4044 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 66 unused Assets / (61.0 KB). Loaded Objects now: 4512.
+Memory consumption went from 149.7 MB to 149.6 MB.
+Total: 3.470800 ms (FindLiveObjects: 0.362700 ms CreateObjectMapping: 0.123200 ms MarkObjects: 2.864300 ms  DeleteObjects: 0.119500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -190,6 +192,102 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 90669.183813 seconds.
+  path: Assets/Sprit/kiwi/half_kiwi 2.png
+  artifactKey: Guid(a082ba2af6ae28b4eb83aef0166d0877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprit/kiwi/half_kiwi 2.png using Guid(a082ba2af6ae28b4eb83aef0166d0877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea14b030adb8ca5b9fd3e7c95c80a79b') in 0.076646 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 69.293965 seconds.
+  path: Assets/Sprit/lemon/half_lemon.png
+  artifactKey: Guid(a1cd5b4ab1d21a7429cb8448cee884e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprit/lemon/half_lemon.png using Guid(a1cd5b4ab1d21a7429cb8448cee884e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9eb86daf4de86e65ef241e1f1eb5e6f') in 0.025843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 23.883303 seconds.
+  path: Assets/Sprit/mango/half_mango.png
+  artifactKey: Guid(cbefe217c8ba05f45a4a1b640f32c268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprit/mango/half_mango.png using Guid(cbefe217c8ba05f45a4a1b640f32c268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4982a5fe57ff349c054028d5c474f019') in 0.031665 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 27.589976 seconds.
+  path: Assets/Sprit/orange/half_orange1.png
+  artifactKey: Guid(dca70adf09c6ad54c97f4b197e2b5f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprit/orange/half_orange1.png using Guid(dca70adf09c6ad54c97f4b197e2b5f48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d6f285d222b0999b91fbdf42dc9c49') in 0.023960 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 72.335978 seconds.
+  path: Assets/Prefs/Fruits/full_kiwi.prefab
+  artifactKey: Guid(c914593016eccce468ded6a28ce11d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_kiwi.prefab using Guid(c914593016eccce468ded6a28ce11d16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dafe31e52f12f0f65e050727d449344') in 0.044479 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Prefs/Fruits/full_watermelon.prefab
+  artifactKey: Guid(d3860c5e883d84742adac9dee6b40a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_watermelon.prefab using Guid(d3860c5e883d84742adac9dee6b40a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977cedd2b5de90903a095ff62b884a3d') in 0.022102 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Prefs/Fruits/full_peach.prefab
+  artifactKey: Guid(cb3400b888543b842aadf8031e6bfdd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_peach.prefab using Guid(cb3400b888543b842aadf8031e6bfdd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e670b13889b77da00bbae4b984dd61ff') in 0.021249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefs/Fruits/full_lemon.prefab
+  artifactKey: Guid(14650bcea8e99544497e5b033bbbc1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_lemon.prefab using Guid(14650bcea8e99544497e5b033bbbc1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9266228150e6d6221b13d895a40d17a5') in 0.013342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 55.283681 seconds.
+  path: Assets/Prefs/Fruits/full_lemon.prefab
+  artifactKey: Guid(14650bcea8e99544497e5b033bbbc1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_lemon.prefab using Guid(14650bcea8e99544497e5b033bbbc1d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '521d9210e91287cb979bb806ff9ef467') in 0.015697 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefs/Fruits/full_orange.prefab
+  artifactKey: Guid(9181215e48c08fb40bd05cce5d0ce624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_orange.prefab using Guid(9181215e48c08fb40bd05cce5d0ce624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '851776f902516f2638ac62dc11a75fb5') in 0.012859 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefs/Fruits/full_watermelon.prefab
+  artifactKey: Guid(d3860c5e883d84742adac9dee6b40a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_watermelon.prefab using Guid(d3860c5e883d84742adac9dee6b40a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3260ea83c21e7cdd47b2edac39b5f6') in 0.017799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefs/Fruits/full_pear.prefab
+  artifactKey: Guid(c69c65dee85597f429a717b5ebc3887f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefs/Fruits/full_pear.prefab using Guid(c69c65dee85597f429a717b5ebc3887f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb29a1c4e632a517f8a3db30ee36e332') in 0.011920 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server

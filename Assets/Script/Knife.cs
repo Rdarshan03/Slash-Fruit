@@ -30,8 +30,9 @@ public class Knife : MonoBehaviour
             Destroy(gameObject);
         }
         else if (collision.CompareTag("Fruit")) {
-            Color color = collision.GetComponent<Fruits>().myColor;
-            LevelScript.instance.CreateFill(color);
+          Fruits fruits = collision.GetComponent<Fruits>();
+            fruits.startFruitAnim();
+          
         
         }
 

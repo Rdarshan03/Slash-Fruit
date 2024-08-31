@@ -13,6 +13,7 @@ public class LevelScript : MonoBehaviour
     public List<SpriteFillVerticalWithColor> FillPrefList;
 
     public Transform throwPoint; 
+    public Transform FruteAnimStoppoint; 
 
 
 

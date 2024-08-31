@@ -237,3 +237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myColor: {r: 1, g: 0.93725497, b: 0.7058824, a: 1}
+  FruitPartPref: {fileID: 8938223664791710772, guid: 49fdd4d458d56e344b9a4b544a8f9901, type: 3}
+  FruitPart_1: {fileID: 21300000, guid: bdd730e52d2db4b4bb551f26439739a9, type: 3}
+  FruitPart_2: {fileID: 21300000, guid: 4f09e2fe58e451a4aa5857f384709d65, type: 3}

@@ -234,6 +234,7 @@ Transform:
   - {fileID: 1031188799}
   - {fileID: 127025104}
   - {fileID: 1282145875}
+  - {fileID: 990347964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &255052671
@@ -254,6 +255,7 @@ MonoBehaviour:
   FillParent: {fileID: 1271342337}
   FillPrefList: []
   throwPoint: {fileID: 1282145875}
+  FruteAnimStoppoint: {fileID: 990347964}
   targetScale: {x: 1.1, y: 1.1, z: 1.1}
   duration: 0.2
 --- !u!1 &345804872
@@ -1027,6 +1029,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &990347963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990347964}
+  m_Layer: 0
+  m_Name: FruteAnimStopPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990347964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990347963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.71, y: -1.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 255052670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1016037552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,8 +1305,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1031188799}
-  - component: {fileID: 1031188800}
   - component: {fileID: 1031188801}
+  - component: {fileID: 1031188802}
   m_Layer: 0
   m_Name: Round1
   m_TagString: Untagged
@@ -1291,7 +1324,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.21, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1814758938}
@@ -1301,19 +1334,6 @@ Transform:
   - {fileID: 175428959}
   m_Father: {fileID: 255052670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1031188800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031188798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60679155a5f72494db8673942c2bc3e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &1031188801
 Rigidbody2D:
   serializedVersion: 4
@@ -1341,6 +1361,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1031188802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031188798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a434ee2c688ceed46a01ef7e67062a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zigzagStyles:
+  - duration: 5
+    angle: -360
+    zigzagCount: 1
+    easeType: 4
 --- !u!4 &1078935968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 978028347681497120, guid: 2d933bb5e821ed5489e69fe6511d52ef, type: 3}
@@ -1418,7 +1455,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: afb5a66c1c0bf2840a414414f0b1d709, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1481,6 +1518,10 @@ PrefabInstance:
     - target: {fileID: 422352806466425686, guid: 14650bcea8e99544497e5b033bbbc1d0, type: 3}
       propertyPath: m_Name
       value: full_lemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 541084320023651419, guid: 14650bcea8e99544497e5b033bbbc1d0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7275317385372817758, guid: 14650bcea8e99544497e5b033bbbc1d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1820,6 +1861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: full_pineapple
       objectReference: {fileID: 0}
+    - target: {fileID: 7820003765702164011, guid: 18f5984ae377719419084cd427197673, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1865,6 +1910,10 @@ PrefabInstance:
     - target: {fileID: -7689673786147339033, guid: c914593016eccce468ded6a28ce11d16, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4634363082980015914, guid: c914593016eccce468ded6a28ce11d16, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4335511472823331111, guid: c914593016eccce468ded6a28ce11d16, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -2742,6 +2791,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myColor: {r: 0, g: 0, b: 0, a: 0}
+  FruitPartPref: {fileID: 0}
+  FruitPart_1: {fileID: 0}
+  FruitPart_2: {fileID: 0}
 --- !u!50 &2041176104
 Rigidbody2D:
   serializedVersion: 4
@@ -2849,6 +2901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4823223164296441511, guid: 52e05338cfc5a094cb2cc208e2c83876, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8105806189598825165, guid: 52e05338cfc5a094cb2cc208e2c83876, type: 3}
       propertyPath: m_Name
       value: full_apple
@@ -2930,7 +2986,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57d764141a69216458b69d9abea79e0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3034,6 +3090,10 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1031188801}
+    - target: {fileID: 7663413486275629503, guid: 2d933bb5e821ed5489e69fe6511d52ef, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
