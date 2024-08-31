@@ -1,12 +1,25 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class LevelScript : MonoBehaviour
 {
     public static LevelScript instance;
 
-    public GameObject knifePrefab; // Reference to the knife prefab
-    public Transform throwPoint; // Point from where the knife will be thrown
+    public GameObject knifePrefab;
+    public GameObject knifeImageAnim;
+    public Transform throwPoint; 
 
+
+
+    public Vector3 targetScale = new Vector3(2f, 2f, 1f);
+    public float duration = 1f;
+    private Tween scaleTween;
+
+    private void Start()
+    {
+        // animator.SetTrigger("create");
+        InitializeAnimation();
+    }
     private void Update()
     {
         // Check for input to throw the knife (e.g., pressing the space bar)
@@ -15,18 +28,29 @@ public class LevelScript : MonoBehaviour
             ThrowKnife();
         }
     }
+    public void InitializeAnimation()
+    {
+        // Optionally stop any existing tween
+        scaleTween?.Kill();
 
+        // Start a new scaling animation
+        knifeImageAnim.transform.localScale = Vector3.zero;
+        scaleTween = knifeImageAnim.transform.DOScale(targetScale, duration)
+            .SetEase(Ease.InOutBounce) // Customize easing
+            .OnComplete(OnAnimationComplete);
+    }
     private void ThrowKnife()
     {
         if (knifePrefab && throwPoint)
         {
             // Instantiate the knife at the throw point
+            InitializeAnimation();
             GameObject knife = Instantiate(knifePrefab, throwPoint.position, throwPoint.rotation);
 
             // Get the Knife script and Rigidbody2D component
             Knife knifeScript = knife.GetComponent<Knife>();
             Rigidbody2D rb = knife.GetComponent<Rigidbody2D>();
-
+          
             if (rb)
             {
                 // Set the knife's velocity based on throw direction and speed
@@ -36,5 +60,19 @@ public class LevelScript : MonoBehaviour
                 knifeScript.knifeRot = true;
             }
         }
+    }
+
+
+    public void StopAnimation()
+    {
+        if (scaleTween != null)
+        {
+            scaleTween.Kill();
+        }
+    }
+
+    private void OnAnimationComplete()
+    {
+        Debug.Log("Scaling animation completed!");
     }
 }
