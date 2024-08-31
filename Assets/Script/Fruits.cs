@@ -11,6 +11,7 @@ public class Fruits : MonoBehaviour
     public Sprite FruitPart_2;
     Collider2D MyCollider;
     SpriteRenderer spriteRenderer;
+    
     private void Start()
     {
         MyCollider = GetComponent<Collider2D>();
@@ -18,10 +19,15 @@ public class Fruits : MonoBehaviour
     }
     public void startFruitAnim() {
 
-     
+        LevelScript.instance.WinCount--;
         MyCollider.enabled = false;
         spriteRenderer.enabled = false;
-       
+
+        GameObject Ps = Instantiate(LevelScript.instance.ParticlePref);
+        Ps.transform.position=transform.position;   
+        FruteParticle fruteParticle = Ps.GetComponent<FruteParticle>();
+        fruteParticle.PlayParticle(myColor);
+
 
         GameObject Part1=Instantiate(FruitPartPref);
         Part1.GetComponent<SpriteRenderer>().sprite = FruitPart_1;
@@ -32,8 +38,22 @@ public class Fruits : MonoBehaviour
         Part1.transform.DOMoveY(Part1.transform.position.y + 1.5f, 0.4f).OnComplete(() =>
         {
 
-            Part1.transform.DOMove(LevelScript.instance.FruteAnimStoppoint.position, 0.3f).OnComplete(() => Part1.transform.DOScale(Vector3.zero, 0.5f));
-           
+            Vector3[] waypoints = new Vector3[]
+                  {
+                   Part1.transform.position, // Start position (world space)
+                   LevelScript.instance.FruteAnimStoppoint1.position,
+                 LevelScript.instance.FruteAnimStoppoint2.position // End position (world space)
+                  };
+
+            Part1.transform.DOPath(waypoints, 0.3f, PathType.CatmullRom)
+                        .SetEase(Ease.InOutFlash)
+                        .OnComplete(() =>
+                        {
+                           
+                            Part1.transform.DOScale(Vector3.zero, 0.5f);
+                        });
+
+
         });
 
         GameObject Part2 = Instantiate(FruitPartPref);
@@ -46,8 +66,33 @@ public class Fruits : MonoBehaviour
         Part2.transform.DOMoveY(Part2.transform.position.y +1.5f, 0.5f).OnComplete(() =>
         {
 
-            Part2.transform.DOMove(LevelScript.instance.FruteAnimStoppoint.position, 0.5f).OnComplete(() => Part2.transform.DOScale(Vector3.zero, 0.5f));
-            LevelScript.instance.CreateFill(myColor);
+
+
+
+
+            Vector3[] waypoints = new Vector3[]
+                  {
+                   Part2.transform.position, // Start position (world space)
+                   LevelScript.instance.FruteAnimStoppoint1.position,
+                 LevelScript.instance.FruteAnimStoppoint2.position // End position (world space)
+                  };
+
+            Part2.transform.DOPath(waypoints, 0.5f, PathType.CatmullRom)
+                        .SetEase(Ease.InOutFlash)
+                        .OnComplete(() =>
+                        {
+                            LevelScript.instance.CreateFill(myColor);
+                            Part2.transform.DOScale(Vector3.zero, 0.5f);
+                            if (LevelScript.instance.WinCount == 0)
+                            {
+                                LevelScript.instance.LevelWin();
+                            }
+                        });
+
+
+
+          
+            
         });
     }
 }

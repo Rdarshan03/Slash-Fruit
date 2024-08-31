@@ -11,27 +11,29 @@ public class LevelScript : MonoBehaviour
     public GameObject FillPref;
     public GameObject FillParent;
     public List<SpriteFillVerticalWithColor> FillPrefList;
-
+    public GameObject ParticlePref;
     public Transform throwPoint; 
-    public Transform FruteAnimStoppoint; 
-
+    public Transform FruteAnimStoppoint1;
+    public Transform FruteAnimStoppoint2;
+    public int WinCount;
 
 
     public Vector3 targetScale = new Vector3(2f, 2f, 1f);
     public float duration = 1f;
     private Tween scaleTween;
+    public GameObject Glass;
     private void Awake()
     {
         instance=this;
     }
     private void Start()
     {
-        // animator.SetTrigger("create");
+      
         InitializeAnimation();
     }
     private void Update()
     {
-        // Check for input to throw the knife (e.g., pressing the space bar)
+       
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ThrowKnife();
@@ -39,33 +41,27 @@ public class LevelScript : MonoBehaviour
     }
     public void InitializeAnimation()
     {
-        // Optionally stop any existing tween
+      
         scaleTween?.Kill();
-
-        // Start a new scaling animation
         knifeImageAnim.transform.localScale = Vector3.zero;
         scaleTween = knifeImageAnim.transform.DOScale(targetScale, duration)
-            .SetEase(Ease.InOutBounce) // Customize easing
-            .OnComplete(OnAnimationComplete);
+            .SetEase(Ease.InOutBounce)
+            .OnComplete(()=>{ });
     }
     private void ThrowKnife()
     {
         if (knifePrefab && throwPoint)
         {
-            // Instantiate the knife at the throw point
+         
             InitializeAnimation();
             GameObject knife = Instantiate(knifePrefab, throwPoint.position, throwPoint.rotation);
-
-            // Get the Knife script and Rigidbody2D component
             Knife knifeScript = knife.GetComponent<Knife>();
             Rigidbody2D rb = knife.GetComponent<Rigidbody2D>();
           
             if (rb)
             {
-                // Set the knife's velocity based on throw direction and speed
+               
                 rb.velocity = throwPoint.up * knifeScript.speed;
-
-                // Optionally, enable rotation
                 knifeScript.knifeRot = true;
             }
         }
@@ -79,13 +75,10 @@ public class LevelScript : MonoBehaviour
         if (FillPrefList.Count == 0)
         {
             fillEffectController.fillAmount = 0.1f;
-
-
         }
         else
         {
             fillEffectController.spriteRenderer.sortingOrder = FillPrefList[FillPrefList.Count - 1].spriteRenderer.sortingOrder - 1;
-
             fillEffectController.fillAmount = FillPrefList[FillPrefList.Count - 1].fillAmount + 0.1f;
 
         }
@@ -102,8 +95,28 @@ public class LevelScript : MonoBehaviour
         }
     }
 
-    private void OnAnimationComplete()
-    {
-        Debug.Log("Scaling animation completed!");
+    public void LevelWin() {
+
+        StartGlassAnim();
+        Debug.Log("Winn");
+    }
+    public void StartGlassAnim() {
+        StopAnimation();
+        knifeImageAnim.transform.DOScale(Vector3.zero, duration).SetDelay(2f);
+        Glass.transform.DOMoveX(-1.346f, 1).SetDelay(2f).OnComplete(() => {
+            for (int i = 0; i < FillPrefList.Count; i++)
+            {
+                FillPrefList[i].speed = 1.5f;
+                FillPrefList[i].fillAmount = 0f;
+                FillPrefList[i].waveSpeed = 0f;
+                FillPrefList[i].waveFrequency = 0f;
+                FillPrefList[i].waveAmplitude = 0f;
+            }
+            Glass.transform.DOMoveX(5f, 1).SetDelay(5f);
+           
+
+        });
+
+
     }
 }
