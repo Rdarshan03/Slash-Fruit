@@ -29,5 +29,11 @@ public class Knife : MonoBehaviour
             // Destroy the knife on collision with an object tagged "line"
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("Fruit")) {
+            Color color = collision.GetComponent<Fruits>().myColor;
+            LevelScript.instance.CreateFill(color);
+        
+        }
+
     }
 }

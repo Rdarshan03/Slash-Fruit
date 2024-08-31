@@ -250,6 +250,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knifePrefab: {fileID: 4627241972674108543, guid: cee486074ff6e7342b6b676cba6e75ea, type: 3}
   knifeImageAnim: {fileID: 1477894578834759581}
+  FillPref: {fileID: 5678909976767187566, guid: 369c189496a6c0a468dfe447ef8a842a, type: 3}
+  FillParent: {fileID: 1271342337}
+  FillPrefList: []
   throwPoint: {fileID: 1282145875}
   targetScale: {x: 1.1, y: 1.1, z: 1.1}
   duration: 0.2
@@ -562,7 +565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &684849953
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1012,7 +1015,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 6bc18471dd6a21f4e9b0c33994022b09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1310,23 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60679155a5f72494db8673942c2bc3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zigzagStyles:
-  - duration: 5
-    angle: 360
-    zigzagCount: 1
-    easeType: 4
-  - duration: 2
-    angle: 120
-    zigzagCount: 1
-    easeType: 4
-  - duration: 3
-    angle: 300
-    zigzagCount: 1
-    easeType: 4
-  - duration: 5
-    angle: 40
-    zigzagCount: 1
-    easeType: 4
+  myColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &1031188801
 Rigidbody2D:
   serializedVersion: 4
@@ -2754,7 +2741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60679155a5f72494db8673942c2bc3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zigzagStyles: []
+  myColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!50 &2041176104
 Rigidbody2D:
   serializedVersion: 4

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\Knife.cs" />
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleSprite.cs" />
+    <Compile Include="Assets\SpriteFillVerticalWithColor.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModulePhysics2D.cs" />
   </ItemGroup>
@@ -77,6 +78,7 @@
     <None Include="Assets\DOTween_1_2_765\DOTween\DOTween.dll" />
     <None Include="Assets\DOTween_1_2_765\DOTween\readme.txt" />
     <None Include="Assets\DOTween_1_2_765\DOTween\DOTween.XML" />
+    <None Include="Assets\SpriteFill.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

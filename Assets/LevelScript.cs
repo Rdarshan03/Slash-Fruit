@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelScript : MonoBehaviour
@@ -7,6 +8,10 @@ public class LevelScript : MonoBehaviour
 
     public GameObject knifePrefab;
     public GameObject knifeImageAnim;
+    public GameObject FillPref;
+    public GameObject FillParent;
+    public List<SpriteFillVerticalWithColor> FillPrefList;
+
     public Transform throwPoint; 
 
 
@@ -14,7 +19,10 @@ public class LevelScript : MonoBehaviour
     public Vector3 targetScale = new Vector3(2f, 2f, 1f);
     public float duration = 1f;
     private Tween scaleTween;
-
+    private void Awake()
+    {
+        instance=this;
+    }
     private void Start()
     {
         // animator.SetTrigger("create");
@@ -62,7 +70,29 @@ public class LevelScript : MonoBehaviour
         }
     }
 
+    public void CreateFill(Color color) {
 
+        GameObject fill = Instantiate(FillPref, FillParent.transform);
+        SpriteFillVerticalWithColor fillEffectController = fill.GetComponent<SpriteFillVerticalWithColor>();
+        fillEffectController.fillColor = color;
+        if (FillPrefList.Count == 0)
+        {
+            fillEffectController.fillAmount = 0.1f;
+
+
+        }
+        else
+        {
+            fillEffectController.spriteRenderer.sortingOrder = FillPrefList[FillPrefList.Count - 1].spriteRenderer.sortingOrder - 1;
+
+            fillEffectController.fillAmount = FillPrefList[FillPrefList.Count - 1].fillAmount + 0.1f;
+
+        }
+        FillPrefList.Add(fillEffectController);
+
+
+
+    }
     public void StopAnimation()
     {
         if (scaleTween != null)
