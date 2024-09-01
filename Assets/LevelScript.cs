@@ -103,7 +103,7 @@ public class LevelScript : MonoBehaviour
     public void StartGlassAnim() {
         StopAnimation();
         knifeImageAnim.transform.DOScale(Vector3.zero, duration).SetDelay(2f);
-        Glass.transform.DOMoveX(-1.346f, 1).SetDelay(2f).OnComplete(() => {
+        Glass.transform.DOMoveX(Glass.transform.position.x, 1).SetDelay(2f).OnComplete(() => {
             for (int i = 0; i < FillPrefList.Count; i++)
             {
                 FillPrefList[i].speed = 1.5f;
