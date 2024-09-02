@@ -15,9 +15,15 @@ E:/flutter projects/admin new/Slash-Fruit
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
+<<<<<<< Updated upstream
 49972
 Successfully changed project path to: E:/flutter projects/admin new/Slash-Fruit
 E:/flutter projects/admin new/Slash-Fruit
+=======
+57805
+Successfully changed project path to: E:/New Git App Gamers/Slash-Fruit
+E:/New Git App Gamers/Slash-Fruit
+>>>>>>> Stashed changes
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,12 +55,21 @@ E:/flutter projects/admin new/Slash-Fruit
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Player connection [11764] Host "[IP] 192.168.29.96 [Port] 0 [Flags] 2 [Guid] 1685461232 [EditorId] 1685461232 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TNN1O7L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [11764] Host "[IP] 192.168.29.96 [Port] 0 [Flags] 2 [Guid] 1685461232 [EditorId] 1685461232 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-TNN1O7L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
 Refreshing native plugins compatible for Editor in 4842.61 ms, found 4 plugins.
+=======
+Player connection [20524] Host "[IP] 172.26.240.1 [Port] 0 [Flags] 2 [Guid] 2010612300 [EditorId] 2010612300 [Version] 1048832 [Id] WindowsEditor(7,DSR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [20524] Host "[IP] 172.26.240.1 [Port] 0 [Flags] 2 [Guid] 2010612300 [EditorId] 2010612300 [Version] 1048832 [Id] WindowsEditor(7,DSR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
+Refreshing native plugins compatible for Editor in 15.30 ms, found 4 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.11f1 (d00248457e15)
 [Subsystems] Discovering subsystems at path E:/Unity Editers/2022.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -68,6 +83,7 @@ Direct3D:
     Driver:   27.20.20904.1004
 Shader 'Custom/WaterFillEffect': fallback shader 'Transparent' not found
 Initialize mono
+<<<<<<< Updated upstream
 Mono path[0] = 'E:/Unity Editers/2022.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity Editers/2022.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Unity Editers/2022.3.11f1/Editor/Data/MonoBleedingEdge/etc'
@@ -79,18 +95,42 @@ Register platform support module: E:/Unity Editers/2022.3.11f1/Editor/Data/Playb
 Register platform support module: E:/Unity Editers/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Registered in 0.790734 seconds.
 - Loaded All Assemblies, in  7.916 seconds
+=======
+Mono path[0] = 'E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: E:/PROGRAM_SETUP_WINDOWS/UNITY_EDITERS/2022.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005816 seconds.
+- Loaded All Assemblies, in  0.445 seconds
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
+<<<<<<< Updated upstream
 Android Extension - Scanning For ADB Devices 678 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  1.428 seconds
 Domain Reload Profiling: 9343ms
 	BeginReloadAssembly (6203ms)
+=======
+Android Extension - Scanning For ADB Devices 1343 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.658 seconds
+Domain Reload Profiling: 2104ms
+	BeginReloadAssembly (166ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 		CreateAndSetChildDomain (2ms)
 	RebuildCommonClasses (86ms)
 	RebuildNativeTypeToScriptingClass (26ms)
@@ -114,6 +154,31 @@ Domain Reload Profiling: 9343ms
 			BeforeProcessingInitializeOnLoad (4ms)
 			ProcessInitializeOnLoadAttributes (214ms)
 			ProcessInitializeOnLoadMethodAttributes (145ms)
+=======
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (176ms)
+		LoadAssemblies (167ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (170ms)
+				TypeCache.ScanAssembly (155ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (1659ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1599ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (1458ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (90ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -121,8 +186,13 @@ Domain Reload Profiling: 9343ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  1.683 seconds
 Refreshing native plugins compatible for Editor in 10.74 ms, found 4 plugins.
+=======
+- Loaded All Assemblies, in  0.986 seconds
+Refreshing native plugins compatible for Editor in 7.41 ms, found 4 plugins.
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
@@ -131,6 +201,7 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  1.267 seconds
 Domain Reload Profiling: 2948ms
 	BeginReloadAssembly (322ms)
@@ -173,6 +244,50 @@ Unloading 4067 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 70 unused Assets / (61.5 KB). Loaded Objects now: 4538.
 Memory consumption went from 149.7 MB to 149.6 MB.
 Total: 8.074300 ms (FindLiveObjects: 0.688600 ms CreateObjectMapping: 0.286400 ms MarkObjects: 6.838900 ms  DeleteObjects: 0.257900 ms)
+=======
+- Finished resetting the current domain, in  0.714 seconds
+Domain Reload Profiling: 1701ms
+	BeginReloadAssembly (215ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (675ms)
+		LoadAssemblies (560ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (259ms)
+			TypeCache.Refresh (215ms)
+				TypeCache.ScanAssembly (180ms)
+			ScanForSourceGeneratedMonoScriptInfo (32ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (715ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (484ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (51ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (313ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Shader 'Custom/WaterFillEffect': fallback shader 'Transparent' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 6.31 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4067 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 70 unused Assets / (61.9 KB). Loaded Objects now: 4538.
+Memory consumption went from 150.7 MB to 150.6 MB.
+Total: 6.104800 ms (FindLiveObjects: 0.735500 ms CreateObjectMapping: 0.147600 ms MarkObjects: 4.995200 ms  DeleteObjects: 0.224300 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -186,6 +301,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Prepare
 Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  1.243 seconds
@@ -238,6 +354,40 @@ Unloading 4054 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 42 unused Assets / (36.7 KB). Loaded Objects now: 4543.
 Memory consumption went from 147.5 MB to 147.4 MB.
 Total: 13.856400 ms (FindLiveObjects: 2.072900 ms CreateObjectMapping: 1.711100 ms MarkObjects: 9.939800 ms  DeleteObjects: 0.130400 ms)
+=======
+Received Import Request.
+  Time since last request: 248906.422005 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Firework/FireworkBlue.prefab
+  artifactKey: Guid(e6b0c8eedb7b4b148b2d830fdcf06603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Firework/FireworkBlue.prefab using Guid(e6b0c8eedb7b4b148b2d830fdcf06603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de751fe9de86cb6cb5b6ce05c15f490a') in 0.211937 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Firework/FireworkGreenCluster.prefab
+  artifactKey: Guid(1a35b29c9a2c62e43a2268b6cbcc16b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Firework/FireworkGreenCluster.prefab using Guid(1a35b29c9a2c62e43a2268b6cbcc16b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '257181d2a00b26b423d629760f50b301') in 0.022979 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Firework/FireworkRed.prefab
+  artifactKey: Guid(e6e6f5beacfc73b41883f0becc4e2a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Firework/FireworkRed.prefab using Guid(e6e6f5beacfc73b41883f0becc4e2a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6969d350650774d3ef441e8aaab7ddd') in 0.018905 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Prepare
+Shader 'Custom/WaterFillEffect': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 6.15 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (0.9 KB). Loaded Objects now: 4547.
+Memory consumption went from 84.9 MB to 84.9 MB.
+Total: 5.062500 ms (FindLiveObjects: 0.546200 ms CreateObjectMapping: 0.151500 ms MarkObjects: 4.339900 ms  DeleteObjects: 0.024000 ms)
+>>>>>>> Stashed changes
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -254,6 +404,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+<<<<<<< Updated upstream
 Received Import Request.
   Time since last request: 657.268109 seconds.
   path: Assets/Scenes/Play.unity
@@ -267,12 +418,21 @@ Begin MonoManager ReloadAssembly
 - Loaded All Assemblies, in  1.252 seconds
 Refreshing native plugins compatible for Editor in 7.79 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
+=======
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.674 seconds
+Refreshing native plugins compatible for Editor in 5.78 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+>>>>>>> Stashed changes
 Native extension for Android target not found
 Native extension for WebGL target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  1.998 seconds
 Domain Reload Profiling: 3248ms
 	BeginReloadAssembly (552ms)
@@ -382,6 +542,49 @@ Unloading 4054 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 42 unused Assets / (35.7 KB). Loaded Objects now: 4551.
 Memory consumption went from 151.3 MB to 151.3 MB.
 Total: 8.401200 ms (FindLiveObjects: 0.598700 ms CreateObjectMapping: 0.224100 ms MarkObjects: 7.460400 ms  DeleteObjects: 0.116500 ms)
+=======
+- Finished resetting the current domain, in  1.164 seconds
+Domain Reload Profiling: 1838ms
+	BeginReloadAssembly (228ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (367ms)
+		LoadAssemblies (495ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (17ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1165ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (480ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (37ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (320ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Shader 'Custom/WaterFillEffect': fallback shader 'Transparent' not found
+Refreshing native plugins compatible for Editor in 5.55 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4054 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (36.8 KB). Loaded Objects now: 4551.
+Memory consumption went from 148.8 MB to 148.7 MB.
+Total: 4.974300 ms (FindLiveObjects: 0.814600 ms CreateObjectMapping: 0.152600 ms MarkObjects: 3.921800 ms  DeleteObjects: 0.083600 ms)
+>>>>>>> Stashed changes
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -397,6 +600,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+<<<<<<< Updated upstream
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
@@ -793,6 +997,8 @@ Received Import Request.
 Start importing Assets/Prefs/Fruits/full_mango.prefab using Guid(2d933bb5e821ed5489e69fe6511d52ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3a5fddb600c0029c0d5c49bc13c6a4') in 0.168957 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 35
+=======
+>>>>>>> Stashed changes
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
 AssetImportWorker is now disconnected from the server
